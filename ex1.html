@@ -1,15 +1,35 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<script src="https://d3js.org/d3.v4.min.js"></script>
-
-		<link rel="stylesheet" href="index.css" />
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.11.0/d3.min.js"></script>
 	</head>
 	<body>
-		<p>this is a paragraph</p>
+<style>
 
-		<script>
-				d3.select("p").text("Hello World!");
-		</script>
+.chart div {
+  font: 10px sans-serif;
+  background-color: steelblue;
+  text-align: right;
+  padding: 3px;
+  margin: 1px;
+  color: white;
+}
+
+</style>
+
+<script>
+
+	var data = [4, 8, 15, 16, 23, 42];
+
+	var body = d3.select("body");
+
+	body.style("color","black");
+	body.style("background-color","white");
+
+
+	var div = body.append("div");
+	div.html("Hello, world!");
+</script>
+
 	</body>
 </html>
